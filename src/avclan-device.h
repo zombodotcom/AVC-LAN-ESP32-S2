@@ -5,9 +5,14 @@
 
   Not for commercial use.
 */
+
 #include "avclan-messages.h"
 #include "avclan-registers.h"
+#ifdef ARDUINO_ARCH_AVR
 #include <avr/pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
 
 #pragma once
 

@@ -6,7 +6,11 @@
   Not for commercial use.
 */
 
+#ifdef ARDUINO_ARCH_AVR
 #include <avr/pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
 #include "avclan-drv.h"
 
 #ifndef avclan_master_h

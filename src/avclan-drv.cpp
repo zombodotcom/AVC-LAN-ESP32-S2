@@ -13,10 +13,15 @@
 #include "avclan-i2c.h"
 #endif
 //#include <Arduino.h>						          
-#ifdef AVR
+#ifdef ARDUINO_ARCH_AVR
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
+#else
+#include <pgmspace.h>
+// #include <avr/interrupt.h> # this is the problem right now. ESP32 Doesn't use the AVR/Interrupt and there isntone. as esp32 is not avr
 #endif
+
+
 #ifdef AVC_I2C
 #include <Wire.h>
 #endif
